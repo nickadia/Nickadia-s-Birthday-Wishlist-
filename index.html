@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nickadia's Birthday Wishlist</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap');
+:root{--bg:#080607;--panel:#120b0e;--rose:#c7838d;--rose2:#efb6c0;--gold:#d9b64b;--pink:#f3aabd;--cream:#fff8f5;--muted:#cdbfc2;--line:#b9788266}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 50% -10%,#4a1c28 0,#190b10 35%,#080607 72%);color:var(--cream);font-family:Montserrat,Arial,sans-serif;min-height:100vh}body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.13;background-image:radial-gradient(#fff 1px,transparent 1px);background-size:27px 27px}
+.page{display:none;min-height:100vh;padding:35px 22px 70px;position:relative}.page.active{display:flex;align-items:center;justify-content:center}.wrap{width:min(1100px,100%);text-align:center}
+.eyebrow{text-transform:uppercase;letter-spacing:5px;font-size:11px;color:var(--rose2);margin-bottom:15px}.ornament{color:var(--gold);font-size:30px;margin:12px}
+h1,h2,h3{font-family:"Cormorant Garamond",serif}h1{font-size:clamp(58px,12vw,120px);line-height:.8;text-transform:uppercase;margin:0}h2{font-size:clamp(45px,7vw,78px);line-height:.9;margin:0}h3{margin:0;font-size:28px}.pink{color:var(--rose2)}.subtitle{max-width:680px;margin:25px auto;color:var(--muted);line-height:1.8;font-size:14px}
+.btn{border:0;border-radius:999px;padding:15px 30px;background:linear-gradient(105deg,var(--rose),var(--gold),var(--rose2));color:#160b0e;font-weight:700;letter-spacing:1.5px;cursor:pointer;transition:.25s;box-shadow:0 12px 35px #0009}.btn:hover{transform:translateY(-3px);box-shadow:0 18px 45px #000}
+.back{position:absolute;top:25px;left:22px;border:0;background:none;color:var(--rose2);cursor:pointer;letter-spacing:1px;font-size:11px}.box{max-width:720px;margin:30px auto;padding:38px;border:1px solid var(--line);border-radius:30px;background:#10090cdd;box-shadow:0 25px 70px #0009}.box p{line-height:1.9;color:#eee0e4;font-size:14px}
+.category-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:15px;margin-top:40px}.category,.budget{border:1px solid var(--line);border-radius:24px;background:linear-gradient(150deg,#181014,#0d090b);color:var(--cream);cursor:pointer;transition:.25s}.category{padding:25px 12px;min-height:165px}.category:hover,.budget:hover{transform:translateY(-6px);border-color:var(--gold);box-shadow:0 15px 45px #000}.icon{font-size:34px;margin-bottom:14px}.category strong{font-family:"Cormorant Garamond";font-size:24px;display:block}.category small{color:var(--muted);font-size:10px}
+.budget-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:800px;margin:38px auto}.budget{padding:28px 12px;font-weight:600}.budget:last-child{grid-column:2}
+.result-head{margin-bottom:28px}.result-label{color:var(--gold);font-size:12px;letter-spacing:1px}.gift-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:left}.gift{border:1px solid var(--line);border-radius:25px;overflow:hidden;background:#100a0d;box-shadow:0 12px 35px #0007}.photo{height:190px;background:linear-gradient(135deg,#2a151c,#0d080a);display:flex;align-items:center;justify-content:center;font-size:50px;color:var(--rose2)}.gift-body{padding:20px}.price{color:var(--gold);font-weight:700;margin:7px 0 12px}.gift p{font-size:12px;color:var(--muted);line-height:1.6}.link{display:inline-block;margin-top:8px;color:var(--rose2);font-size:11px;text-decoration:none;letter-spacing:1px}
+.final-heart{font-size:70px;margin:10px}.tiny{font-size:10px;color:#a8979b;margin-top:25px}
+@media(max-width:850px){.category-grid{grid-template-columns:repeat(2,1fr)}.gift-grid{grid-template-columns:1fr 1fr}.budget-grid{grid-template-columns:1fr 1fr}.budget:last-child{grid-column:auto}}
+@media(max-width:520px){.page{padding:28px 16px 55px}.category-grid,.gift-grid,.budget-grid{grid-template-columns:1fr 1fr;gap:11px}.category{min-height:140px;padding:20px 8px}.category strong{font-size:21px}.budget{padding:23px 8px;font-size:11px}.box{padding:25px 19px}.gift-grid{grid-template-columns:1fr}.photo{height:170px}}
+</style>
+</head>
+<body>
+
+<section class="page active" id="home"><div class="wrap">
+  <div class="eyebrow">A little birthday something ♡</div><div class="ornament">✦</div>
+  <h1>Nickadia's<br><span class="pink">Birthday</span><br>Wishlist</h1>
+  <p class="subtitle">A curated little guide for anyone who wants to make my birthday extra special.</p>
+  <button class="btn" onclick="go('intro')">ENTER WISHLIST ♡</button>
+  <div class="tiny">rose gold • black • gold • pink</div>
+</div></section>
+
+<section class="page" id="intro"><button class="back" onclick="go('home')">← BACK</button><div class="wrap">
+  <div class="eyebrow">Welcome</div><h2>Hello, <span class="pink">love</span> ♡</h2>
+  <div class="box">
+    <p><b>YOUR INTRODUCTION GOES HERE</b></p>
+    <p>Replace this text with your own birthday message. Explain anything you want your guests to know before they start shopping.</p>
+    <p>You can also mention that gifts are optional and that you appreciate their love and birthday wishes. 🎀</p>
+  </div>
+  <button class="btn" onclick="go('people')">LET'S SHOP →</button>
+</div></section>
+
+<section class="page" id="people"><button class="back" onclick="go('intro')">← BACK</button><div class="wrap">
+  <div class="eyebrow">Step 01</div><h2>Who are you <span class="pink">shopping for?</span></h2><p class="subtitle">Choose the category that fits you best.</p>
+  <div class="category-grid">
+    <button class="category" onclick="choose('Parents / Guardians')"><div class="icon">👑</div><strong>Parents / Guardians</strong><small>for the big loves</small></button>
+    <button class="category" onclick="choose('Family')"><div class="icon">💕</div><strong>Family</strong><small>family love</small></button>
+    <button class="category" onclick="choose('Best Friend')"><div class="icon">🎀</div><strong>Best Friend</strong><small>my person</small></button>
+    <button class="category" onclick="choose('Friends')"><div class="icon">🫶🏽</div><strong>Friends</strong><small>besties & friends</small></button>
+    <button class="category" onclick="choose('Family Friends')"><div class="icon">🏡</div><strong>Family Friends</strong><small>sweet people</small></button>
+  </div>
+</div></section>
+
+<section class="page" id="budget"><button class="back" onclick="go('people')">← BACK</button><div class="wrap">
+  <div class="eyebrow">Step 02</div><h2>What's your <span class="pink">budget?</span></h2><p class="subtitle">Shopping as <b id="who"></b>. Pick a spending range.</p>
+  <div class="budget-grid">
+    <button class="budget" onclick="showGifts('Under $3,000 JMD')">UNDER $3,000 JMD</button>
+    <button class="budget" onclick="showGifts('$3,000–$5,000 JMD')">$3,000–$5,000 JMD</button>
+    <button class="budget" onclick="showGifts('$5,000–$10,000 JMD')">$5,000–$10,000 JMD</button>
+    <button class="budget" onclick="showGifts('$10,000–$20,000 JMD')">$10,000–$20,000 JMD</button>
+    <button class="budget" onclick="showGifts('$20,000+ JMD')">$20,000+ JMD</button>
+  </div>
+</div></section>
+
+<section class="page" id="gifts"><button class="back" onclick="go('budget')">← CHANGE BUDGET</button><div class="wrap">
+  <div class="result-head"><div class="eyebrow">Step 03</div><div class="result-label" id="selection"></div><h2>Gift <span class="pink">ideas</span> ♡</h2><p class="subtitle">Replace these placeholders with your actual wishlist items.</p></div>
+  <div class="gift-grid">
+    <article class="gift"><div class="photo">＋</div><div class="gift-body"><h3>Gift #1</h3><div class="price">ADD PRICE</div><p>ADD DESCRIPTION — size, color, brand, or any details you want.</p><a class="link" href="#" onclick="return false">ADD SHOPPING LINK →</a></div></article>
+    <article class="gift"><div class="photo">＋</div><div class="gift-body"><h3>Gift #2</h3><div class="price">ADD PRICE</div><p>ADD DESCRIPTION — size, color, brand, or any details you want.</p><a class="link" href="#" onclick="return false">ADD SHOPPING LINK →</a></div></article>
+    <article class="gift"><div class="photo">＋</div><div class="gift-body"><h3>Gift #3</h3><div class="price">ADD PRICE</div><p>ADD DESCRIPTION — size, color, brand, or any details you want.</p><a class="link" href="#" onclick="return false">ADD SHOPPING LINK →</a></div></article>
+  </div>
+  <button class="btn" style="margin-top:30px" onclick="go('thanks')">FINISHED SHOPPING ♡</button>
+</div></section>
+
+<section class="page" id="thanks"><button class="back" onclick="go('home')">← HOME</button><div class="wrap">
+  <div class="final-heart">♡</div><div class="eyebrow">That's all, love</div><h2>Thank you for <span class="pink">celebrating</span> me!</h2>
+  <div class="box"><p><b>YOUR THANK-YOU MESSAGE GOES HERE</b></p><p>Add a sweet final message for everyone who visits your wishlist.</p></div>
+  <button class="btn" onclick="go('people')">SHOP AGAIN →</button>
+</div></section>
+
+<script>
+let selected='';
+function go(id){document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));document.getElementById(id).classList.add('active');window.scrollTo(0,0)}
+function choose(name){selected=name;document.getElementById('who').textContent=name;go('budget')}
+function showGifts(budget){document.getElementById('selection').textContent=selected+'  •  '+budget;go('gifts')}
+</script>
+</body>
+</html>
