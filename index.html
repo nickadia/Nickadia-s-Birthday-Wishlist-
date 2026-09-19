@@ -12,11 +12,11 @@
 .eyebrow{text-transform:uppercase;letter-spacing:5px;font-size:11px;color:var(--rose2);margin-bottom:15px}.ornament{color:var(--gold);font-size:30px;margin:12px}
 h1,h2,h3{font-family:"Cormorant Garamond",serif}h1{font-size:clamp(58px,12vw,120px);line-height:.8;text-transform:uppercase;margin:0}h2{font-size:clamp(45px,7vw,78px);line-height:.9;margin:0}h3{margin:0;font-size:28px}.pink{color:var(--rose2)}.subtitle{max-width:680px;margin:25px auto;color:var(--muted);line-height:1.8;font-size:14px}
 .btn{border:0;border-radius:999px;padding:15px 30px;background:linear-gradient(105deg,var(--rose),var(--gold),var(--rose2));color:#160b0e;font-weight:700;letter-spacing:1.5px;cursor:pointer;transition:.25s;box-shadow:0 12px 35px #0009}.btn:hover{transform:translateY(-3px);box-shadow:0 18px 45px #000}
-.back{position:absolute;top:25px;left:22px;border:0;background:none;color:var(--rose2);cursor:pointer;letter-spacing:1px;font-size:11px}.box{max-width:720px;margin:30px auto;padding:38px;border:1px solid var(--line);border-radius:30px;background:#10090cdd;box-shadow:0 25px 70px #0009}.box p{line-height:1.9;color:#eee0e4;font-size:14px}
+.back{position:absolute;top:25px;left:22px;border:0;background:none;color:var(--rose2);cursor:pointer;letter-spacing:1px;font-size:11px}.box{max-width:760px;margin:30px auto;padding:38px;border:1px solid var(--line);border-radius:30px;background:#10090cdd;box-shadow:0 25px 70px #0009}.box p{line-height:1.9;color:#eee0e4;font-size:14px}
 .category-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:15px;margin-top:40px}.category,.budget{border:1px solid var(--line);border-radius:24px;background:linear-gradient(150deg,#181014,#0d090b);color:var(--cream);cursor:pointer;transition:.25s}.category{padding:25px 12px;min-height:165px}.category:hover,.budget:hover{transform:translateY(-6px);border-color:var(--gold);box-shadow:0 15px 45px #000}.icon{font-size:34px;margin-bottom:14px}.category strong{font-family:"Cormorant Garamond";font-size:24px;display:block}.category small{color:var(--muted);font-size:10px}
-.budget-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:800px;margin:38px auto}.budget{padding:28px 12px;font-weight:600}.budget:last-child{grid-column:2}
-.result-head{margin-bottom:28px}.result-label{color:var(--gold);font-size:12px;letter-spacing:1px}.gift-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:left}.gift{border:1px solid var(--line);border-radius:25px;overflow:hidden;background:#100a0d;box-shadow:0 12px 35px #0007}.photo{height:190px;background:linear-gradient(135deg,#2a151c,#0d080a);display:flex;align-items:center;justify-content:center;font-size:50px;color:var(--rose2)}.gift-body{padding:20px}.price{color:var(--gold);font-weight:700;margin:7px 0 12px}.gift p{font-size:12px;color:var(--muted);line-height:1.6}.link{display:inline-block;margin-top:8px;color:var(--rose2);font-size:11px;text-decoration:none;letter-spacing:1px}
-.final-heart{font-size:70px;margin:10px}.tiny{font-size:10px;color:#a8979b;margin-top:25px}
+.budget-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:850px;margin:38px auto}.budget{padding:28px 12px;font-weight:600}.budget:last-child{grid-column:2}
+.result-head{margin-bottom:28px}.result-label{color:var(--gold);font-size:12px;letter-spacing:1px}.gift-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:left}.gift{border:1px solid var(--line);border-radius:25px;overflow:hidden;background:#100a0d;box-shadow:0 12px 35px #0007}.photo{height:190px;background:linear-gradient(135deg,#2a151c,#0d080a);display:flex;align-items:center;justify-content:center;font-size:50px;color:var(--rose2);background-size:cover;background-position:center}.photo.has-image{font-size:0}.gift-body{padding:20px}.price{color:var(--gold);font-weight:700;margin:7px 0 12px}.gift p{font-size:12px;color:var(--muted);line-height:1.6}.link{display:inline-block;margin-top:8px;color:var(--rose2);font-size:11px;text-decoration:none;letter-spacing:1px}
+.final-heart{font-size:70px;margin:10px}.tiny{font-size:10px;color:#a8979b;margin-top:25px}.note{font-size:11px;color:#a8979b;margin-top:18px;line-height:1.7}.empty{padding:28px;border:1px dashed var(--line);border-radius:22px;color:var(--muted);grid-column:1/-1;text-align:center}
 @media(max-width:850px){.category-grid{grid-template-columns:repeat(2,1fr)}.gift-grid{grid-template-columns:1fr 1fr}.budget-grid{grid-template-columns:1fr 1fr}.budget:last-child{grid-column:auto}}
 @media(max-width:520px){.page{padding:28px 16px 55px}.category-grid,.gift-grid,.budget-grid{grid-template-columns:1fr 1fr;gap:11px}.category{min-height:140px;padding:20px 8px}.category strong{font-size:21px}.budget{padding:23px 8px;font-size:11px}.box{padding:25px 19px}.gift-grid{grid-template-columns:1fr}.photo{height:170px}}
 </style>
@@ -24,66 +24,195 @@ h1,h2,h3{font-family:"Cormorant Garamond",serif}h1{font-size:clamp(58px,12vw,120
 <body>
 
 <section class="page active" id="home"><div class="wrap">
-  <div class="eyebrow">A little birthday something ♡</div><div class="ornament">✦</div>
+  <div class="eyebrow">A birthday wish list • made with love</div><div class="ornament">✦</div>
   <h1>Nickadia's<br><span class="pink">Birthday</span><br>Wishlist</h1>
-  <p class="subtitle">A curated little guide for anyone who wants to make my birthday extra special.</p>
-  <button class="btn" onclick="go('intro')">ENTER WISHLIST ♡</button>
+  <p class="subtitle">A little guide to the things I love, the things I want, and the things that would make my birthday even more special. ♡</p>
+  <button class="btn" onclick="go('intro')">ENTER MY WISHLIST ♡</button>
   <div class="tiny">rose gold • black • gold • pink</div>
 </div></section>
 
 <section class="page" id="intro"><button class="back" onclick="go('home')">← BACK</button><div class="wrap">
-  <div class="eyebrow">Welcome</div><h2>Hello, <span class="pink">love</span> ♡</h2>
+  <div class="eyebrow">Welcome to my wishlist</div><h2>A little note <span class="pink">from me</span> ♡</h2>
   <div class="box">
-    <p><b>YOUR INTRODUCTION GOES HERE</b></p>
-    <p>Replace this text with your own birthday message. Explain anything you want your guests to know before they start shopping.</p>
-    <p>You can also mention that gifts are optional and that you appreciate their love and birthday wishes. 🎀</p>
+    <p>Welcome to my birthday wishlist! 🎀</p>
+    <p>I made this little website to make choosing a birthday gift a bit easier. Pick the category that describes you, choose a budget that works for you, and you'll see the gifts I've put under that range.</p>
+    <p>Please don't feel pressured to spend outside of what you're comfortable with. Your presence, love, birthday wishes and support already mean so much to me. But if you're looking for a little help deciding what to get me, I hope this makes it easier. ♡</p>
+    <p><b>Now let's see what you're shopping for... ✨</b></p>
   </div>
-  <button class="btn" onclick="go('people')">LET'S SHOP →</button>
+  <button class="btn" onclick="go('people')">START SHOPPING →</button>
 </div></section>
 
 <section class="page" id="people"><button class="back" onclick="go('intro')">← BACK</button><div class="wrap">
   <div class="eyebrow">Step 01</div><h2>Who are you <span class="pink">shopping for?</span></h2><p class="subtitle">Choose the category that fits you best.</p>
   <div class="category-grid">
     <button class="category" onclick="choose('Parents / Guardians')"><div class="icon">👑</div><strong>Parents / Guardians</strong><small>for the big loves</small></button>
-    <button class="category" onclick="choose('Family')"><div class="icon">💕</div><strong>Family</strong><small>family love</small></button>
-    <button class="category" onclick="choose('Best Friend')"><div class="icon">🎀</div><strong>Best Friend</strong><small>my person</small></button>
-    <button class="category" onclick="choose('Friends')"><div class="icon">🫶🏽</div><strong>Friends</strong><small>besties & friends</small></button>
+    <button class="category" onclick="choose('Family Members')"><div class="icon">💕</div><strong>Family Members</strong><small>family love</small></button>
+    <button class="category" onclick="choose('Close Friends')"><div class="icon">🎀</div><strong>Close Friends</strong><small>my closest people</small></button>
+    <button class="category" onclick="choose('Friends')"><div class="icon">🫶🏽</div><strong>Friends</strong><small>my people</small></button>
     <button class="category" onclick="choose('Family Friends')"><div class="icon">🏡</div><strong>Family Friends</strong><small>sweet people</small></button>
   </div>
 </div></section>
 
 <section class="page" id="budget"><button class="back" onclick="go('people')">← BACK</button><div class="wrap">
   <div class="eyebrow">Step 02</div><h2>What's your <span class="pink">budget?</span></h2><p class="subtitle">Shopping as <b id="who"></b>. Pick a spending range.</p>
-  <div class="budget-grid">
-    <button class="budget" onclick="showGifts('Under $3,000 JMD')">UNDER $3,000 JMD</button>
-    <button class="budget" onclick="showGifts('$3,000–$5,000 JMD')">$3,000–$5,000 JMD</button>
-    <button class="budget" onclick="showGifts('$5,000–$10,000 JMD')">$5,000–$10,000 JMD</button>
-    <button class="budget" onclick="showGifts('$10,000–$20,000 JMD')">$10,000–$20,000 JMD</button>
-    <button class="budget" onclick="showGifts('$20,000+ JMD')">$20,000+ JMD</button>
-  </div>
+  <div class="budget-grid" id="budgetGrid"></div>
 </div></section>
 
 <section class="page" id="gifts"><button class="back" onclick="go('budget')">← CHANGE BUDGET</button><div class="wrap">
-  <div class="result-head"><div class="eyebrow">Step 03</div><div class="result-label" id="selection"></div><h2>Gift <span class="pink">ideas</span> ♡</h2><p class="subtitle">Replace these placeholders with your actual wishlist items.</p></div>
-  <div class="gift-grid">
-    <article class="gift"><div class="photo">＋</div><div class="gift-body"><h3>Gift #1</h3><div class="price">ADD PRICE</div><p>ADD DESCRIPTION — size, color, brand, or any details you want.</p><a class="link" href="#" onclick="return false">ADD SHOPPING LINK →</a></div></article>
-    <article class="gift"><div class="photo">＋</div><div class="gift-body"><h3>Gift #2</h3><div class="price">ADD PRICE</div><p>ADD DESCRIPTION — size, color, brand, or any details you want.</p><a class="link" href="#" onclick="return false">ADD SHOPPING LINK →</a></div></article>
-    <article class="gift"><div class="photo">＋</div><div class="gift-body"><h3>Gift #3</h3><div class="price">ADD PRICE</div><p>ADD DESCRIPTION — size, color, brand, or any details you want.</p><a class="link" href="#" onclick="return false">ADD SHOPPING LINK →</a></div></article>
-  </div>
-  <button class="btn" style="margin-top:30px" onclick="go('thanks')">FINISHED SHOPPING ♡</button>
+  <div class="result-head"><div class="eyebrow">Step 03</div><div class="result-label" id="selection"></div><h2>Gift <span class="pink">ideas</span> ♡</h2><p class="subtitle">Here are the gifts I've placed in this budget range.</p></div>
+  <div class="gift-grid" id="giftGrid"></div>
+  <p class="note">Want to see another range? Tap “Change Budget” above. ♡</p>
+  <button class="btn" style="margin-top:30px" onclick="go('thanks')">I'M FINISHED ♡</button>
 </div></section>
 
 <section class="page" id="thanks"><button class="back" onclick="go('home')">← HOME</button><div class="wrap">
   <div class="final-heart">♡</div><div class="eyebrow">That's all, love</div><h2>Thank you for <span class="pink">celebrating</span> me!</h2>
-  <div class="box"><p><b>YOUR THANK-YOU MESSAGE GOES HERE</b></p><p>Add a sweet final message for everyone who visits your wishlist.</p></div>
+  <div class="box">
+    <p>Thank you so much for taking the time to look through my birthday wishlist and for thinking of me. Your love, support and presence mean more to me than any gift ever could. 🎀</p>
+    <p><b>If you are attending my birthday event, please don't show up empty-handed. ♡</b></p>
+    <p>Whether you choose something from this wishlist or surprise me with something else, I appreciate you for making my birthday special!</p>
+  </div>
   <button class="btn" onclick="go('people')">SHOP AGAIN →</button>
 </div></section>
 
 <script>
-let selected='';
-function go(id){document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));document.getElementById(id).classList.add('active');window.scrollTo(0,0)}
-function choose(name){selected=name;document.getElementById('who').textContent=name;go('budget')}
-function showGifts(budget){document.getElementById('selection').textContent=selected+'  •  '+budget;go('gifts')}
+/*
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+HOW TO ADD YOUR GIFTS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+You only need to edit the WISHLIST section below.
+
+Each budget has an array of gifts. Add as many gifts as you want.
+
+Example:
+{
+  name: "Pink Coach Bag",
+  price: "$18,000 JMD",
+  description: "Pink shoulder bag with gold hardware.",
+  image: "https://example.com/photo.jpg",
+  link: "https://example.com/product"
+}
+
+If you don't have an image or shopping link, leave "".
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+*/
+
+const WISHLIST = {
+  "Parents / Guardians": {
+    "$10,000–$20,000 JMD": [],
+    "$20,000–$35,000 JMD": [],
+    "$35,000–$40,000 JMD": [],
+    "$40,000–$50,000 JMD": [],
+    "$50,000+ JMD": []
+  },
+
+  "Family Members": {
+    "Under $5,000 JMD": [],
+    "$5,000–$10,000 JMD": [],
+    "$10,000–$20,000 JMD": [],
+    "$20,000–$35,000 JMD": [],
+    "$35,000–$40,000 JMD": []
+  },
+
+  "Close Friends": {
+    "Under $5,000 JMD": [],
+    "$5,000–$8,000 JMD": [],
+    "$8,000–$15,000 JMD": [],
+    "$15,000+ JMD": []
+  },
+
+  "Friends": {
+    "Under $3,000 JMD": [],
+    "$3,000–$5,000 JMD": [],
+    "$5,000–$8,000 JMD": [],
+    "$8,000–$15,000 JMD": [],
+    "$15,000+ JMD": []
+  },
+
+  "Family Friends": {
+    "$5,000–$10,000 JMD": [],
+    "$10,000–$15,000 JMD": [],
+    "$15,000–$20,000 JMD": [],
+    "$20,000–$30,000 JMD": [],
+    "$30,000+ JMD": []
+  }
+};
+
+let selected = "";
+let selectedBudget = "";
+
+function go(id){
+  document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
+  document.getElementById(id).classList.add("active");
+  window.scrollTo(0,0);
+}
+
+function choose(name){
+  selected = name;
+  document.getElementById("who").textContent = name;
+  renderBudgets();
+  go("budget");
+}
+
+function renderBudgets(){
+  const grid = document.getElementById("budgetGrid");
+  grid.innerHTML = "";
+  Object.keys(WISHLIST[selected]).forEach(budget => {
+    const button = document.createElement("button");
+    button.className = "budget";
+    button.textContent = budget;
+    button.onclick = () => showGifts(budget);
+    grid.appendChild(button);
+  });
+}
+
+function showGifts(budget){
+  selectedBudget = budget;
+  document.getElementById("selection").textContent = selected + "  •  " + budget;
+  renderGifts();
+  go("gifts");
+}
+
+function renderGifts(){
+  const grid = document.getElementById("giftGrid");
+  const gifts = WISHLIST[selected][selectedBudget] || [];
+  grid.innerHTML = "";
+
+  if(gifts.length === 0){
+    grid.innerHTML = `
+      <div class="empty">
+        <h3>No gifts added yet ♡</h3>
+        <p>You'll see the gifts for this budget here once you add them to the WISHLIST section of the code.</p>
+      </div>`;
+    return;
+  }
+
+  gifts.forEach(gift => {
+    const article = document.createElement("article");
+    article.className = "gift";
+
+    const photo = document.createElement("div");
+    photo.className = "photo" + (gift.image ? " has-image" : "");
+    if(gift.image){
+      photo.style.backgroundImage = `url("${gift.image}")`;
+    } else {
+      photo.textContent = "♡";
+    }
+
+    const body = document.createElement("div");
+    body.className = "gift-body";
+    body.innerHTML = `
+      <h3>${gift.name}</h3>
+      <div class="price">${gift.price}</div>
+      <p>${gift.description}</p>
+      ${gift.link ? `<a class="link" href="${gift.link}" target="_blank" rel="noopener">VIEW / SHOP →</a>` : ""}
+    `;
+
+    article.appendChild(photo);
+    article.appendChild(body);
+    grid.appendChild(article);
+  });
+}
 </script>
 </body>
 </html>
